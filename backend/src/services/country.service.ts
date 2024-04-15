@@ -17,6 +17,6 @@ export default class CountryService {
 	}
 
 	async insertCountry(country: CreateCountryInput) {
-		return this.db.insert(country);
+		return this.db.save(country);
 	}
 }

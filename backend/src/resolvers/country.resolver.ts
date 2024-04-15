@@ -4,7 +4,7 @@ import Country , {CreateCountryInput} from '../entities/country.entity';
 
 @Resolver()
 export default class CountryResolver {
-    @Query(() => Country)
+    @Query(() => [Country])
     async countries() {
         return await new CountryService().getAllCountries();
     }
