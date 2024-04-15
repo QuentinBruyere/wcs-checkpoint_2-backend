@@ -23,6 +23,10 @@ export default class Country {
 	@Field({nullable: true})
 	@Column()
 	emoji: string;
+
+	@Field({nullable: true})
+	@Column()
+	continent: string;
 }
 
 @InputType()
@@ -33,4 +37,6 @@ export class CreateCountryInput {
 	name: string
 	@Field({nullable: true})
 	emoji: string
+	@Field({nullable: true})
+	continent: string
 }

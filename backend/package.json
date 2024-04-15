@@ -5,7 +5,8 @@
   "scripts": {
     "test": "test",
     "compile": "tsc",
-    "start": "ts-node-dev --exit-child --watch src --poll src/index.ts"
+    "start": "ts-node-dev --exit-child --watch src --poll src/index.ts",
+    "fixtures": "fixtures-ts-node-commonjs load ./fixtures/Countries.yml --dataSource=./src/lib/datasource.ts"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@types/node": "^20.12.7",
     "ts-node-dev": "^2.0.0",
+    "typeorm-fixtures-cli": "^4.0.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {

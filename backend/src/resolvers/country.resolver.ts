@@ -14,6 +14,11 @@ export default class CountryResolver {
         return await new CountryService().getCountryByCode(code);
     }
 
+    @Query(() => [Country])
+    async countriesByContinent(@Arg('continent') continent: string) {
+        return await new CountryService().getCountriesByContinent(continent);
+    }
+
     @Mutation(() => Country)
 	async insertCountry(@Arg('country') country: CreateCountryInput) {
 		return await new CountryService().insertCountry(country);

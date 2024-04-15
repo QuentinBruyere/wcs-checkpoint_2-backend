@@ -16,6 +16,10 @@ export default class CountryService {
 		return this.db.findOneBy({ code });
 	}
 
+    async getCountriesByContinent(continent: string) {
+		return this.db.findBy({ continent });
+	}
+
 	async insertCountry(country: CreateCountryInput) {
 		return this.db.save(country);
 	}
