@@ -1,7 +1,7 @@
 entity: Country
 items:
   country{1..10}:
-    name: '{{faker.location.country}}'
-    code: '{{faker.location.countryCode}}'
-    emoji: '{{faker.internet.emoji}}'
-    continent: '{{faker.location.country}}'
+    name: '{{location.country}}'
+    code: '{{location.countryCode}}'
+    emoji: '{{internet.emoji}}'
+    continent: '{{location.country}}'
